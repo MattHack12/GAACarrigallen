@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Carrigallen GAA</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img_crest.jpg" alt="Carrigallen GAA Crest">
+        </div>
+        <h1>Carrigallen GAA Club</h1>
+        <p>Contact Us</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="carrigallen.html">Home</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or inquiries, feel free to contact us using the form below.</p>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Carrigallen GAA Club. All rights reserved.</p>
+        <ul>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

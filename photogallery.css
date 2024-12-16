@@ -1,0 +1,206 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b2235; /* Deep dark background */
+    color: #f1f1f1; /* Light text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #003da5; /* Deep blue background */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #212a45; /* Dark navy background */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #0053d1; /* Hover effect with bright blue */
+}
+
+nav ul li a.active {
+    color: #003da5; /* Active link color */
+    font-weight: bold;
+}
+
+/* Main Section */
+main {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 15px;
+    background-color: #212a45;
+    border-radius: 10px;
+    border: 3px solid #334062; /* Dark blue border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.gallery-container {
+    overflow-x: scroll; /* Enables horizontal scrolling */
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.gallery-images {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.gallery-images img {
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 12px; /* Rounded corners */
+    border: 3px solid #003da5; /* Blue border for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.2); /* Slight brightness effect */
+}
+
+/* Gallery Navigation Buttons */
+.gallery-button {
+    background-color: #003da5;
+    color: white;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.gallery-button:hover {
+    background-color: #0053d1; /* Lighter blue on hover */
+    transform: scale(1.15);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003da5; /* Footer with blue background */
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #0053d1; /* Hover effect on social media links */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .photo-gallery {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .gallery-images img {
+        max-width: 120px;
+        max-height: 120

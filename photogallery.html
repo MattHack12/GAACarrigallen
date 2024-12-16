@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="photogallery.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrigallen GAA Photo Gallery</title>
+    <link rel="stylesheet" href="carrigallen-dark.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img_crest.jpg" alt="Carrigallen GAA Logo">
+        </div>
+        <h1>Carrigallen GAA Club</h1>
+        <p>Photo Gallery</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="carrigallen.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="photo-gallery">
+                <button id="prevBtn" class="gallery-button">❮</button>
+                <div class="gallery-container">
+                    <div class="gallery-images">
+                        <img src="img_CG1.jpg" alt="Image 1">
+                        <img src="img_CG2.jpg" alt="Image 2">
+                        <img src="img_CG4.jpg" alt="Image 3">
+                        <img src="img_CG6.jpg" alt="Image 4">
+                        <img src="img_CG3.jpg" alt="Image 5">
+                        <img src="img_CG5.jpg" alt="Image 6">
+                        <img src="img_CG7.jpg" alt="Image 7">
+                    </div>
+                </div>
+                <button id="nextBtn" class="gallery-button">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carrigallen GAA Club. All rights reserved.</p>
+        <ul>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script>
+       
+        const galleryImages = document.querySelector('.gallery-images');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let scrollAmount = 0;
+        const scrollStep = 300;  
+
+        nextBtn.addEventListener('click', () => {
+            galleryImages.scrollBy({
+                left: scrollStep,
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            galleryImages.scrollBy({
+                left: -scrollStep,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
